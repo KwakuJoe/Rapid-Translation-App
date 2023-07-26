@@ -20,7 +20,7 @@
                 <textarea @input="typing"  ref="el" class="w-full bg-none mt-3 bg-transparent focus:outline-none placeholder:text-3xl text-3xl" name="" placeholder="Type to translate" id="" rows="10"></textarea>
 
             </div>
-            <UIcon  class="md:text-5xl" name="i-heroicons-arrow-path-rounded-square"/>
+            <Icon name="ion:arrow-swap"   />
             <div class="flex flex-col w-full items-start">
                 <div class="flex w-full items-center justify-between">
                     <ToDropdown/>

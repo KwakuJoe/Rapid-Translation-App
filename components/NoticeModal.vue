@@ -52,8 +52,8 @@
                     Note
                 </p>
 
-                <div class="flex flex-row items-start gap-x-10">
-                   <UIcon class="text-5xl" name="i-heroicons-exclamation-circle"/>
+                <div class="flex flex-row items-start gap-x-5">
+                   <Icon name="octicon:alert-24"   />
                     <div class="flex flex-col gap-y-2">
                         <p>We inform you that the max length is 8500 character.</p>
                         <p>Since Rapid Translator is on free mode, it accepts 50 request per day for total users</p>
