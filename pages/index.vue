@@ -12,8 +12,8 @@
             <NoticeModal/>
         </div>
 
-    <div class="grow">
-        <div class="flex md:flex-row flex-col items-center w-full ring-1 ring-slate-300/40 py-3 px-2 rounded-t-md gap-x-2">
+     <div class="grow">
+        <div class="flex md:flex-row flex-col items-center w-full ring-1 ring-slate-300/40 py-3 px-2 rounded-t-md gap-x-5">
             <div class="flex flex-col w-full items-start borderb ">
                 <FromDropdown/>
                 <!-- Input Event name Event text --> 
@@ -46,6 +46,7 @@
 // import autosize from 'autosize'
 import {useLanguageStore} from '../stores/languages'
 const languageStore = useLanguageStore()
+
 
 // text area binding
     function typing(event:any) {

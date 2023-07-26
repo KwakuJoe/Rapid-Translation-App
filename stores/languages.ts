@@ -14,7 +14,7 @@ import { defineStore } from 'pinia'
     async function translate() {
 
       const toast = useToast()
-
+      const config = useRuntimeConfig();
 
 
         const { data, pending} = await useFetch('https://rapid-translate-multi-traduction.p.rapidapi.com/t', {
@@ -24,7 +24,7 @@ import { defineStore } from 'pinia'
               // Set the request headers
               options.headers = options.headers || {
                 'content-type': 'application/json',
-                'X-RapidAPI-Key': '237bd2a1efmsh12c6c558b8a0ac5p186483jsnc1257f094d13',
+                'X-RapidAPI-Key': `${config.public.apiSecret}`,
                 'X-RapidAPI-Host': 'rapid-translate-multi-traduction.p.rapidapi.com'
               }
               options.body = {
