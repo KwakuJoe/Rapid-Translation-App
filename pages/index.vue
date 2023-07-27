@@ -27,13 +27,13 @@
                 <UIcon v-if="languageStore.is_loading" name="i-heroicons-arrow-path"/>
                 </div>
                 <!-- Input Event name Event text --> 
-                <textarea readonly class="w-full bg-none mt-3 bg-transparent focus:outline-none placeholder:text-3xl text-3xl" name=""  id="" rows="10">{{ languageStore.output_text  }}</textarea>
+                <textarea readonly class="w-full bg-none mt-3 bg-transparent focus:outline-none placeholder:text-3xl text-3xl" name=""  id="" rows="10">{{ languageStore.output_text[0]  }}</textarea>
             </div>
         </div>
-    </div>
+     </div>
 
     <!-- developed by -->
-    <p class="text-gray-400 text-opacity-50 text-xs text-center">Nuxt 3, vue 3, Tailwind, Nuxt UI, Rapid Translate Multi Traduction (A Rapid Api)</p>
+    <p class="text-gray-400 text-opacity-50 text-xs text-center mt-3">Nuxt 3, vue 3, Tailwind, Nuxt UI, Rapid Translate Multi Traduction (A Rapid Api)</p>
     <nuxt-link to="https://www.linkedin.com/in/josephampah/"><p class="text-gray-400 hover:text-green-700 text-opacity-50 text-xs text-center mb-5">Developed Kwaku Joseph</p></nuxt-link>
     </div>
  </UContainer>

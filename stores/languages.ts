@@ -39,13 +39,6 @@ import { defineStore } from 'pinia'
             onRequestError({ request, options, error }) {
               // Handle the request errors
               console.log(error.message);
-              toast.add({
-                id: 'request_error',
-                title: '): Oops!, Error try to translate your request, please try again',
-                description: `${error}`,
-                timeout: 0,
-              })
-              
               is_loading.value = false
             },
 
