@@ -27,7 +27,7 @@
                 <UIcon v-if="languageStore.is_loading" name="i-heroicons-arrow-path"/>
                 </div>
                 <!-- Input Event name Event text --> 
-                <textarea readonly class="w-full bg-none mt-3 bg-transparent focus:outline-none placeholder:text-3xl text-3xl" name=""  id="" rows="10">{{ languageStore.output_text  }}</textarea>
+                <textarea readonly class="w-full bg-none mt-3 bg-transparent focus:outline-none placeholder:text-3xl text-3xl" name=""  id="" rows="10">{{ languageStore.output_text[0]  }}</textarea>
             </div>
         </div>
     </div>

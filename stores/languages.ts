@@ -39,27 +39,33 @@ import { defineStore } from 'pinia'
             onRequestError({ request, options, error }) {
               // Handle the request errors
               console.log(error.message);
-              toast.add({
-                id: 'request_error',
-                title: '): Oops!, Error try to translate your request, please try again',
-                description: `${error}`,
-                timeout: 0,
-              })
-              
               is_loading.value = false
             },
 
             onResponse({ request, response, options }) {
-              // Process the response data
-            //   localStorage.setItem('token', response._data.token)
-            // console.log(response._data)
-            output_text.value = response._data
+              if(response.status === 429){
 
-            is_loading.value = false
+                toast.add({
+                  id: 'request_error',
+                  title: '): Oops!, Error try to translate your request, please try again',
+                  description: `${response._data.message}`,
+                  timeout: 0,
+                })
+
+              }
+
+              if(response.status === 200){
+                 output_text.value = response._data
+              }
+
+              is_loading.value = false
+
             },
 
             onResponseError({ request, response, options, error }) {
               is_loading.value = false
+
+              response.status 
               // Handle the response errors
               console.log(response._data)
               toast.add({
@@ -71,7 +77,7 @@ import { defineStore } from 'pinia'
             }
           })
 
-          output_text.value = data.value
+          // output_text.value = data.value
           // is_loading.value = pending.value
 
     }
