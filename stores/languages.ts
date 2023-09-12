@@ -17,7 +17,7 @@ import { defineStore } from 'pinia'
       const config = useRuntimeConfig();
 
 
-        const { data, pending} = await useFetch('https://rapid-translate-multi-traduction.p.rapidapi.com/t', {
+        await useFetch('https://rapid-translate-multi-traduction.p.rapidapi.com/t', {
             method:'post',
             watch:[input_text],
             onRequest({ request, options }) {
@@ -48,7 +48,7 @@ import { defineStore } from 'pinia'
                 toast.add({
                   id: 'request_error',
                   title: '): Oops!, Error try to translate your request, please try again',
-                  description: `${response._data.message}`,
+                  description: `Request run out, Please try again in 24 hours.`,
                   timeout: 0,
                 })
 
